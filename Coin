@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WOWPP | Solana Community Token</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#08080f;
+color:#fff;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%, rgba(20,241,149,.15), transparent 30%),
+radial-gradient(circle at 80% 60%, rgba(153,69,255,.15), transparent 30%),
+radial-gradient(circle at 50% 90%, rgba(0,255,255,.1), transparent 30%);
+z-index:-1;
+animation: floatBg 15s infinite alternate;
+}
+
+@keyframes floatBg{
+from{transform:translateY(-20px);}
+to{transform:translateY(20px);}
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+padding:25px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-family:'Orbitron',sans-serif;
+font-size:2rem;
+font-weight:800;
+background:linear-gradient(90deg,#14f195,#9945ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+opacity:.8;
+}
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+text-align:center;
+}
+
+.hero-content{
+width:100%;
+}
+
+.hero h1{
+font-size:4rem;
+font-family:'Orbitron',sans-serif;
+margin-bottom:20px;
+}
+
+.gradient{
+background:linear-gradient(90deg,#14f195,#00ffff,#9945ff);
+background-size:300%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation: glow 8s infinite linear;
+}
+
+@keyframes glow{
+0%{background-position:0%;}
+100%{background-position:300%;}
+}
+
+.hero p{
+font-size:1.2rem;
+max-width:700px;
+margin:auto;
+opacity:.8;
+line-height:1.8;
+}
+
+.contract-box{
+margin:35px auto;
+background:rgba(255,255,255,.05);
+padding:18px;
+border-radius:15px;
+max-width:900px;
+word-break:break-all;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.copy-btn{
+margin-top:15px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:linear-gradient(90deg,#14f195,#9945ff);
+color:#fff;
+font-weight:bold;
+cursor:pointer;
+}
+
+.buttons{
+margin-top:25px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.btn{
+padding:14px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.primary{
+background:linear-gradient(90deg,#14f195,#9945ff);
+color:white;
+}
+
+.secondary{
+border:1px solid #14f195;
+color:#14f195;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:100px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+font-family:'Orbitron',sans-serif;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.04);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#14f195;
+}
+
+.chart{
+width:100%;
+height:700px;
+border-radius:20px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.chart iframe{
+width:100%;
+height:100%;
+border:none;
+}
+
+footer{
+text-align:center;
+padding:40px;
+border-top:1px solid rgba(255,255,255,.08);
+opacity:.8;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+nav{
+display:none;
+}
+
+.chart{
+height:500px;
+}
+
+.contract-box{
+font-size:.8rem;
+}
+
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<div class="logo">WOWPP</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#tokenomics">Tokenomics</a>
+<a href="#chart">Chart</a>
+<a href="#community">Community</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1 class="gradient">
+WOWPP TOKEN
+</h1>
+
+<p>
+A community-powered Solana token built for the trenches.
+Fast transactions, strong community, and unlimited upside potential.
+</p>
+
+<div class="contract-box">
+
+<div id="contract">
+Fcc81Yfp5MayDLqyzsfDC5LQ85pRX5Fihr7Py3yuuray
+</div>
+
+<button class="copy-btn" onclick="copyContract()">
+Copy Contract Address
+</button>
+
+</div>
+
+<div class="buttons">
+
+<a href="https://jup.ag/tokens/CTvryQ58nMbLYACM4oZs6vytBkPTjcYHw5hSpGtojups"
+class="btn primary"
+target="_blank">
+Buy on Jupiter
+</a>
+
+<a href="https://solflare.com"
+class="btn secondary"
+target="_blank">
+Open Solflare
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">Why WOWPP?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Community First</h3>
+<p>Built around holders and supporters who believe in organic growth.</p>
+</div>
+
+<div class="card">
+<h3>Powered By Solana</h3>
+<p>Lightning-fast transactions and low fees.</p>
+</div>
+
+<div class="card">
+<h3>Growth Focused</h3>
+<p>Marketing, community engagement, and long-term development.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="tokenomics">
+
+<h2 class="section-title">Roadmap</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Phase 1</h3>
+<p>Launch, branding, community formation.</p>
+</div>
+
+<div class="card">
+<h3>Phase 2</h3>
+<p>Holder growth, social expansion, marketing.</p>
+</div>
+
+<div class="card">
+<h3>Phase 3</h3>
+<p>Partnerships, trending campaigns, exposure.</p>
+</div>
+
+<div class="card">
+<h3>Phase 4</h3>
+<p>Ecosystem growth and utility development.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="chart">
+
+<h2 class="section-title">Live Chart</h2>
+
+<div class="chart">
+
+<iframe
+src="https://birdeye.so/token/Fcc81Yfp5MayDLqyzsfDC5LQ85pRX5Fihr7Py3yuuray?chain=solana">
+</iframe>
+
+</div>
+
+</section>
+
+<section id="community">
+
+<h2 class="section-title">Join The Community</h2>
+
+<div class="buttons">
+
+<a href="https://x.com/WowPp310232"
+class="btn primary"
+target="_blank">
+X / Twitter
+</a>
+
+<a href="https://www.facebook.com/share/1CLUDExMEq/"
+class="btn secondary"
+target="_blank">
+Facebook
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>WOWPP © 2026 | Built on Solana</p>
+
+<p style="margin-top:10px;">
+Contract:
+Fcc81Yfp5MayDLqyzsfDC5LQ85pRX5Fihr7Py3yuuray
+</p>
+
+</footer>
+
+</div>
+
+<script>
+function copyContract() {
+const text =
+"Fcc81Yfp5MayDLqyzsfDC5LQ85pRX5Fihr7Py3yuuray";
+
+navigator.clipboard.writeText(text);
+
+alert("Contract copied!");
+}
+</script>
+
+</body>
+</html>
