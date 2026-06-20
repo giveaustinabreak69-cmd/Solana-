@@ -1,0 +1,18 @@
+<section class="stats">
+
+<div class="card">
+<h3>Market Cap</h3>
+<p id="marketcap">$0</p>
+</div>
+
+<div class="card">
+<h3>Holders</h3>
+<p id="holders">0</p>
+</div>
+
+<div class="card">
+<h3>Volume</h3>
+<p id="volume">$0</p>
+</div>
+
+</section>
